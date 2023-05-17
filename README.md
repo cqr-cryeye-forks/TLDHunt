@@ -14,6 +14,7 @@ To detect whether a domain is registered or not, we search for the words "**Name
 
 # Domain Extension List
 You can use your custom tlds.txt list, but make sure that it is formatted like this:
+
 ```
 .aero
 .asia
