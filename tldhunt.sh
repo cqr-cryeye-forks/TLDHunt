@@ -65,7 +65,7 @@ processes=0
 for ext in $tlds; do
     domain="$keyword$ext"
     {
-        result=$(whois "$domain" 2>/dev/null | grep -i "Name Server\|nserver\|nameservers")
+        result=$(whois "$domain" 2>/dev/null | grep -i "Name Server\|nserver\|nameservers\|status: active")
         if [ -n "$result" ]; then
             if [ "$nreg" = false ]; then
                 echo -e "taken - $domain"
