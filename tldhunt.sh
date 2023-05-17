@@ -19,12 +19,7 @@ exts="tlds.txt"
 command -v whois &> /dev/null || { printf '%s\n' "whois not installed. You must install whois to use this tool." >&2 ; exit 1 ;}
 
 #Banner
-echo " _____ _    ___  _  _          _   ";
-echo "|_   _| |  |   \| || |_  _ _ _| |_ ";
-echo "  | | | |__| |) | __ | || | ' \  _|";
-echo "  |_| |____|___/|_||_|\_,_|_||_\__|";
-echo "        Domain Availability Checker";
-echo "";
+
 usage() {
   echo "Usage: $0 -k <keyword> [-e <tld> | -E <exts>] [-x]"
   echo "Example: $0 -k linuxsec -E tlds.txt"
