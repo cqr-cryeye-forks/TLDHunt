@@ -65,14 +65,14 @@ processes=0
 for ext in $tlds; do
     domain="$keyword$ext"
     {
-        result=$(whois "$domain" 2>/dev/null | grep -i "Name Server")
+        result=$(whois "$domain" 2>/dev/null | grep -i "Name Server\|nserver\|nameservers")
         if [ -n "$result" ]; then
             if [ "$nreg" = false ]; then
-                echo -e "[${b_red}taken${reset}] - $domain"
+                echo -e "taken - $domain"
             fi
         else
             if [ "$nreg" = false ]; then
-                echo -e "[${b_green}avail${reset}] - $domain"
+                echo -e "avail - $domain"
             else
                 echo -e "$domain"
             fi
